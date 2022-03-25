@@ -1,0 +1,72 @@
+.navbar {
+  height: 70px;
+  background: #090b13;
+  display: flex;
+  align-items: center;
+  padding: 0 36px;
+  color: #fff;
+  overflow-x: hidden;
+}
+.navbar > img {
+  width: 80px;
+}
+.navbar > div {
+  display: flex;
+  flex: 1;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.navbutton_link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+.navbutton_link > span {
+  font-size: 13px;
+  letter-spacing: 1.42px;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 10px;
+}
+.navbutton_link > img {
+  height: 20px;
+}
+.navbutton_link > span::after {
+  content: "";
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -6px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+.navbutton_link:hover > span::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.userimg {
+  height: 40px;
+  width: 40px !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.signout {
+  display: none;
+  position: absolute;
+  margin-right: 85px;
+  right: 0px;
+  font-size: 10px;
+  color: #333;
+  background: #b9b9b9;
+  padding: 2px 4px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.userimg:hover + .signout {
+  display: block
+}
