@@ -17,9 +17,9 @@ export default function Login() {
         const token = credential.accessToken;
         const user = result.user;
         JSON.stringify(user);
-        sessionStorage.setItem("token", token);
-        sessionStorage.setItem("credential", JSON.stringify(credential));
-        sessionStorage.setItem("user", JSON.stringify(user));
+        sessionStorage.setItem("token", "New user");
+        sessionStorage.setItem("credential", JSON.stringify({"user":"new user"}));
+        sessionStorage.setItem("user", JSON.stringify({"user":"new user"}));
         Auth.setUser(user);
         navigate("/", { replace: true });
         return { user };
@@ -33,7 +33,12 @@ export default function Login() {
       });
   };
   const login = () => {
-    googleHandler();
+    // googleHandler();
+    sessionStorage.setItem("token", "New user");
+    sessionStorage.setItem("credential", JSON.stringify({"user":"new user"}));
+    sessionStorage.setItem("user", JSON.stringify({"user":"new user"}));
+    Auth.setUser({"user":"new user"});
+    navigate("/", { replace: true });
   };
   return (
     <div className="login">

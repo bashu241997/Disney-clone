@@ -8,6 +8,7 @@ export default function List() {
   const [Movies, setMovies] = useState([]);
 
   const api = process.env.REACT_APP_API_KEY
+  console.log(process.env)
   useEffect(() => {
     axios
       .get(
